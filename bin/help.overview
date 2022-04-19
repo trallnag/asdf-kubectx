@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cat << EOF
+Kubectx plugin for the asdf version manager.
+EOF
