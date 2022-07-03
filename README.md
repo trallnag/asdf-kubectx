@@ -2,7 +2,8 @@
 
 # asdf-kubectx
 
-[kubectx](https://github.com/ahmetb/kubectx/) plugin for the [asdf version manager](https://asdf-vm.com).
+[kubectx](https://github.com/ahmetb/kubectx/) plugin for the
+[asdf version manager](https://asdf-vm.com).
 
 This plugin installs kubectx. It does not setup shell auto completion nor
 installs required OS dependencies like kubectl itself.

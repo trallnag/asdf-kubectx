@@ -16,26 +16,26 @@ install_path="$ASDF_INSTALL_PATH" && logdebug "install_path=$install_path"
 download_path="$ASDF_DOWNLOAD_PATH" && logdebug "download_path=$download_path"
 
 if [ "$install_type" != "version" ]; then
-    logexit "asdf-$tool_name supports release installs only."
+  logexit "asdf-$tool_name supports release installs only."
 fi
 
 (
-    if ! test -x "$download_path/$tool_name"; then
-        logexit "'$download_path/$tool_name' not executable."
-    fi
+  if ! test -x "$download_path/$tool_name"; then
+    logexit "'$download_path/$tool_name' not executable."
+  fi
 
-    if ! "$download_path/$tool_name" --help > /dev/null; then
-        logexit "Executing '$download_path/$tool_name --help' failed."
-    fi
+  if ! "$download_path/$tool_name" --help > /dev/null; then
+    logexit "Executing '$download_path/$tool_name --help' failed."
+  fi
 
-    mkdir -p "$install_path"
-    mkdir -p "$install_path/bin"
+  mkdir -p "$install_path"
+  mkdir -p "$install_path/bin"
 
-    cp "$download_path/$tool_name" "$install_path/bin/$tool_name"
-    logsuccess "Copied $tool_name binary to '$install_path/bin/$tool_name'."
+  cp "$download_path/$tool_name" "$install_path/bin/$tool_name"
+  logsuccess "Copied $tool_name binary to '$install_path/bin/$tool_name'."
 
-    logsuccess "$tool_name '$install_version' installed."
+  logsuccess "$tool_name '$install_version' installed."
 ) || (
-    rm -rf "$install_path"
-    logexit "An error ocurred during installation."
+  rm -rf "$install_path"
+  logexit "An error ocurred during installation."
 )

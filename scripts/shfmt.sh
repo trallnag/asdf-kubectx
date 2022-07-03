@@ -1,5 +1,11 @@
 #!/bin/sh
 
 shfmt \
-    -s -bn -sr -i 4 -w -l -d \
-    lib/ bin/ scripts/
+  --binary-next-line \
+  --diff \
+  --indent=2 \
+  --list \
+  --simplify \
+  --space-redirects \
+  --write \
+  bin/ lib/ scripts/
