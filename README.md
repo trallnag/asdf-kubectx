@@ -1,3 +1,15 @@
+---
+
+⚠️ **IMPORTANT NOTICE** ⚠️
+
+**Repository is archived and unmaintained.** I personally don't need it anymore,
+as instead of using asdf to install kubectx, I just use Homebrew. No need to
+have the ability to switch between multiple versions of kubectx all the time.
+
+- <https://formulae.brew.sh/formula/kubectx>
+
+---
+
 [![primary](https://github.com/trallnag/asdf-kubectx/actions/workflows/primary.yaml/badge.svg)](https://github.com/trallnag/asdf-kubectx/actions/workflows/primary.yaml)
 
 # asdf-kubectx
